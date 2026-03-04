@@ -1,0 +1,341 @@
+.todo-container {
+  max-width: 700px;
+  margin: 0 auto;
+  padding: var(--p-spacing-lg);
+}
+
+h1 {
+  text-align: center;
+  font-size: 2.25rem;
+  font-weight: 800;
+  color: var(--p-primary);
+  margin-bottom: var(--p-spacing-lg);
+  letter-spacing: -0.05em;
+}
+
+.add-form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--p-spacing-md);
+  background-color: var(--p-surface);
+  padding: var(--p-spacing-lg);
+  border-radius: var(--p-radius-md);
+  margin-bottom: 2rem;
+  border: 1px solid var(--p-border);
+  box-shadow: var(--p-shadow-md);
+}
+
+.input-group-full {
+  grid-column: span 2;
+}
+
+.input-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+.input-group label {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--p-text-muted);
+}
+
+input[type="text"],
+input[type="date"],
+select {
+  padding: 0.75rem var(--p-spacing-md);
+  background-color: var(--p-surface);
+  color: var(--p-text-main);
+  border: 1px solid var(--p-border);
+  border-radius: var(--p-radius-sm);
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+input:focus, select:focus {
+  outline: none;
+  border-color: var(--p-primary);
+  box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.15);
+}
+
+.add-button {
+  grid-column: span 2;
+  background-color: var(--p-primary);
+  color: white;
+  border: none;
+  padding: 0.85rem;
+  border-radius: var(--p-radius-sm);
+  cursor: pointer;
+  font-weight: 700;
+  font-size: 1rem;
+  margin-top: var(--p-spacing-xs);
+  transition: background-color 0.2s, transform 0.1s;
+}
+
+.add-button:hover {
+  background-color: var(--p-primary-hover);
+}
+
+.add-button:active {
+  transform: translateY(1px);
+}
+
+.list-container {
+  margin-top: var(--p-spacing-md);
+}
+
+.no-todos {
+  text-align: center;
+  color: var(--p-text-muted);
+  padding: var(--p-spacing-lg);
+  background: var(--p-surface);
+  border-radius: var(--p-radius-md);
+  border: 1px dashed var(--p-border);
+}
+
+.todo-list {
+  list-style-type: none;
+  display: flex;
+  flex-direction: column;
+  gap: var(--p-spacing-sm);
+}
+
+.todo-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: var(--p-spacing-md) var(--p-spacing-lg);
+  background-color: var(--p-surface);
+  border-radius: var(--p-radius-md);
+  border: 1px solid var(--p-border);
+  box-shadow: var(--p-shadow-sm);
+  transition: box-shadow 0.2s, transform 0.2s;
+}
+
+.todo-item:hover {
+  box-shadow: var(--p-shadow-md);
+  transform: translateY(-2px);
+}
+
+.todo-item.is-completed {
+  opacity: 0.6;
+  background-color: var(--p-background);
+  border-style: dashed;
+}
+
+.todo-content {
+  display: flex;
+  align-items: center;
+  gap: var(--p-spacing-md);
+  flex: 1;
+}
+
+.status-checkbox {
+  width: 1.5rem;
+  height: 1.5rem;
+  cursor: pointer;
+  accent-color: var(--p-primary);
+  border-radius: 4px;
+}
+
+.todo-details {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+
+.todo-name {
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: var(--p-text-main);
+  transition: color 0.2s;
+}
+
+.is-completed .todo-name {
+  text-decoration: line-through;
+  color: var(--p-text-muted);
+}
+
+.meta-info {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  align-items: center;
+  font-size: 0.85rem;
+  color: var(--p-text-muted);
+}
+
+.due-date-icon {
+  margin-right: 3px;
+}
+
+.category-badge {
+  background-color: var(--p-background);
+  color: var(--p-text-muted);
+  padding: 2px 8px;
+  border-radius: 20px;
+  border: 1px solid var(--p-border);
+  font-weight: 500;
+}
+
+.priority-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  font-weight: 600;
+  font-size: 0.8rem;
+  padding: 2px 10px;
+  border-radius: 20px;
+}
+
+.prio-hoch {
+  background-color: rgba(239, 68, 68, 0.1);
+  color: var(--p-danger);
+}
+
+.prio-mittel {
+  background-color: rgba(249, 115, 22, 0.1);
+  color: var(--p-warning);
+}
+
+.prio-niedrig {
+  background-color: rgba(16, 185, 129, 0.1);
+  color: var(--p-success);
+}
+
+.delete-button {
+  background-color: transparent;
+  color: var(--p-text-muted);
+  border: 1px solid transparent;
+  padding: 0.5rem var(--p-spacing-md);
+  border-radius: var(--p-radius-sm);
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 0.875rem;
+  transition: all 0.2s;
+  margin-left: var(--p-spacing-md);
+}
+
+.delete-button:hover {
+  background-color: rgba(239, 68, 68, 0.1);
+  color: var(--p-danger);
+  border-color: rgba(239, 68, 68, 0.2);
+}
+
+.camera-button {
+  background-color: var(--p-surface);
+  color: var(--p-text-main);
+  border: 1px dashed var(--p-border);
+  padding: 1rem;
+  border-radius: var(--p-radius-sm);
+  cursor: pointer;
+  text-align: center;
+  transition: all 0.2s;
+  font-weight: 600;
+}
+
+.camera-button:hover {
+  border-color: var(--p-primary);
+  color: var(--p-primary);
+}
+
+.image-preview-container {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  align-items: flex-start;
+}
+
+.preview-image {
+  max-width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: var(--p-radius-sm);
+  border: 1px solid var(--p-border);
+}
+
+.remove-image-button {
+  background-color: transparent;
+  color: var(--p-danger);
+  border: none;
+  cursor: pointer;
+  font-size: 0.85rem;
+  font-weight: 600;
+  padding: 0;
+}
+
+.todo-item {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+@media(min-width: 600px) {
+  .todo-item {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
+
+.todo-main-content {
+  display: flex;
+  align-items: center;
+  gap: var(--p-spacing-md);
+  flex: 1;
+}
+
+.todo-side-actions {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.todo-image-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  min-width: 90px;
+}
+
+.todo-thumbnail {
+  width: 70px;
+  height: 70px;
+  object-fit: cover;
+  border-radius: var(--p-radius-sm);
+  border: 1px solid var(--p-border);
+}
+
+.image-actions {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.icon-button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 1.1rem;
+  opacity: 0.7;
+  padding: 0;
+}
+
+.icon-button:hover {
+  opacity: 1;
+}
+
+.camera-button-small {
+  background: none;
+  border: 1px dashed var(--p-border);
+  color: var(--p-text-muted);
+  border-radius: var(--p-radius-sm);
+  padding: 0.5rem;
+  font-size: 0.75rem;
+  cursor: pointer;
+}
+
+.camera-button-small:hover {
+  border-color: var(--p-primary);
+  color: var(--p-primary);
+}

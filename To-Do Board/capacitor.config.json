@@ -1,0 +1,6 @@
+{
+  "appId": "com.ChristianHubner.ToDoBoard",
+  "appName": "To-Do Board",
+  "webDir": "dist",
+  "bundledWebRuntime": false
+}

@@ -32,9 +32,9 @@ This project uses Capacitor alongside the Camera and Filesystem plugins. To ensu
 ```sh
 npm install -D @capacitor/cli
 npm install @capacitor/core
-@ionic/pwa-elements
-@capacitor/camera
-@capacitor/filesystem 
+npm install @ionic/pwa-elements
+npm install @capacitor/camera
+npm install @capacitor/filesystem 
 ```
 
 Because the application provides web compatibility, the `@ionic/pwa-elements` package is necessary to supply the web-based user interface for the Camera component. This initialization is already configured within your application entry point.

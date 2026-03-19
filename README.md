@@ -30,7 +30,6 @@ npm install
 This project uses Capacitor alongside the Camera and Filesystem plugins. To ensure everything functions correctly, you must install the following dependencies:
 
 ```sh
-npm install
 npm install -D @capacitor/cli
 npm install @capacitor/core
 npm install @ionic/pwa-elements

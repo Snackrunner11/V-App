@@ -1,0 +1,6 @@
+{
+  "appId": "io.ionic.starter",
+  "appName": "Kamera Plugin Vorlage",
+  "webDir": "dist",
+  "bundledWebRuntime": false
+}

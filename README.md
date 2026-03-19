@@ -30,23 +30,19 @@ npm install
 This project uses Capacitor alongside the Camera and Filesystem plugins. To ensure everything functions correctly, you must install the following dependencies:
 
 ```sh
+npm install
 npm install -D @capacitor/cli
 npm install @capacitor/core
 npm install @ionic/pwa-elements
 npm install @capacitor/camera
-npm install @capacitor/filesystem 
+npm install @capacitor/filesystem
 ```
 
 Because the application provides web compatibility, the `@ionic/pwa-elements` package is necessary to supply the web-based user interface for the Camera component. This initialization is already configured within your application entry point.
 
-### Compile and Hot-Reload for Development
-
+Before running the app, please execute the following commands:
 ```sh
+npm run build-only
+npx cap sync
 npm run dev
-```
-
-### Compile and Minify for Production
-
-```sh
-npm run build
 ```
